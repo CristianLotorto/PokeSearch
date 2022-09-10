@@ -174,4 +174,5 @@ addEventListener("keypress",(e)=>{
         nombre.value="";
 }   
 });
+
 boton.addEventListener("click",getPokemon);
