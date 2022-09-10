@@ -154,7 +154,7 @@ container.innerHTML=`
 <li id="name"><h2>${name}</h2></li>
 <li class="stat">ID: ${id}</li>
 <li class="stat">Type: ${typeName}</li>
-<li class="stat">Weight: ${weight}</li>
+<li class="stat">Weight: ${weight} Kg.</li>
 <li class="stat">Ability:</li>
 <li class="stat">${abilityName}</li>
 <li class="stat">${moveName}</li>
@@ -169,7 +169,7 @@ container.innerHTML=`
 
 addEventListener("keypress",(e)=>{
     if(e.key=="Enter"){
-        value=nombre.value;     
+        value=nombre.value;
         getPokemon();
         nombre.value="";
 }   
