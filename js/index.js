@@ -36,6 +36,7 @@ const cargaDatos=()=>{
 
 form.onsubmit=(e)=>{
     e.preventDefault()
+    getPokemon();
     // localStorage.setItem("Pokemon",JSON.stringify(value));
     // console.log(localStorage);
     nombre.value="";

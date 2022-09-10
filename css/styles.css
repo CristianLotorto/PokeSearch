@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -132,7 +133,8 @@ input{
     letter-spacing: 1px;
 }
 
-@media( max-width: 400px ){
+
+@media (min-width: 0px) and (max-width: 400px){
     body{
         height: 100%;
     }
@@ -167,7 +169,7 @@ input{
     #fondo{
         background-image: url(/img/fondoMobile.jpg);
         opacity: 0.9;
-        height: 900px;
+        height: 1000px;
     }
     
     #stats li{
@@ -178,4 +180,13 @@ input{
     }
     
 
+}
+
+@media(min-width:400px) and (max-width: 1600px){
+
+    #fondo{
+        background-image: url(/img/fondito.jpeg);
+        opacity: 0.9;
+        height: 1000px;
+    }
 }
