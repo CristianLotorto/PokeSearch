@@ -164,14 +164,13 @@ container.innerHTML=`
 `;
 
 });
-
+nombre.value="";
 }
 
 addEventListener("keypress",(e)=>{
     if(e.key=="Enter"){
         value=nombre.value;
         getPokemon();
-        nombre.value="";
 }   
 });
 
