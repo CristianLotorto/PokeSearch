@@ -15,7 +15,6 @@ const animation=()=>{
 
         nameLabel.style.transform="translateY(-31px)";
         nameLabel.style.transitionDuration="500ms";
-        
     });
     
     nombre.addEventListener("blur", ()=>{
@@ -35,11 +34,9 @@ const animation=()=>{
 const cargaDatos=()=>{
 
 form.onsubmit=(e)=>{
-    e.preventDefault()
-    getPokemon();
+    e.preventDefault();
     // localStorage.setItem("Pokemon",JSON.stringify(value));
     // console.log(localStorage);
-    nombre.value="";
 }
 }
 
@@ -68,13 +65,14 @@ cargaDatos();
         // }
         
 const getPokemon=()=>{
-const pokeUrl=`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}/`
-console.log();
+const pokeUrl=`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}`
+console.log(pokeUrl);
 fetch(pokeUrl)
 .then(response=>response.json())
 .then(response=>{
 
 let {sprites: {other:{dream_world:{front_default}}},id,name,weight,types:{0:{type:{name:typeName}}},abilities:{[0]:{ability:{name:abilityName}}},moves:{[0]:{move:{name:moveName}}}}=response;
+
 name=name.replace(name.charAt(0),name.charAt(0).toUpperCase());
 typeName=typeName.replace(typeName.charAt(0),typeName.charAt(0).toUpperCase());
 abilityName=abilityName.replace(abilityName.charAt(0),abilityName.charAt(0).toUpperCase());
@@ -160,13 +158,20 @@ container.innerHTML=`
 <li class="stat">Ability:</li>
 <li class="stat">${abilityName}</li>
 <li class="stat">${moveName}</li>
-                            
-
 
 </ul>
 
 `;
+
 });
+
 }
 
+addEventListener("keypress",(e)=>{
+    if(e.key=="Enter"){
+        value=nombre.value;     
+        getPokemon();
+        nombre.value="";
+}   
+});
 boton.addEventListener("click",getPokemon);
