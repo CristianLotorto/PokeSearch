@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive;
+}
+
+button{
+    background-color: #002500;
+    border: 1px solid black;
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    font-weight: 700;
+    width: 350px;
+}
+
+body{    
+    opacity: 1;
+    height: 100vh;
+}
+
+#fondo{
+position: absolute;
+z-index: -20;
+background-image: url(/img/fondito.jpeg);
+background-repeat: no-repeat;
+background-size: cover;
+width: 100vw;
+height: 100vh;
+}
+
+label{
+    align-self:flex-start;
+    color: black;
+    font-weight: 700;
+    position: absolute;
+    top: 57%;
+    margin-left:5px;
+    z-index: -20;
+    height: 40px;
+    width: 350px;
+}
+
+.label{
+    position: relative;
+}
+
+
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+form{
+    position: flex;
+    background-color: rgba(209, 216, 225, 0.3);
+    box-shadow: -2px 0px 51px -4px rgba(0,0,0,0.51);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 35px 20px;
+    width: 400px;
+}
+
+h1{
+    letter-spacing: -2px;
+}
+
+input{
+    color: black;
+    background-color: rgba(108, 122, 137, 0.373);
+    border: 1px solid;
+    font-weight: 700;
+    height: 40px;
+    letter-spacing: 1px;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    width: 350px;
+    padding: 5px;
+}
+
+.error{
+    color: red;
+    margin-bottom: 5px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#container{
+    position: flex;
+    border-radius: 5px;
+    background-color: rgba(245, 245, 245, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 35px 20px;
+    width: 400px;
+    gap: 25px;
+
+}
+
+
+#container img{
+    width: 300px;
+    height: 250px;
+}
+
+#stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#stats li{
+    font-size: 23px;
+    font-weight: 700;
+    align-items: center;
+    list-style: none;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+
+@media( max-width: 400px ){
+    body{
+        height: 100%;
+    }
+
+    button{
+        width: 250px;
+    }
+    label{
+        color:black;
+        width: 250px;
+    }
+    input{
+        width: 250px;
+    }
+    form{
+        
+        background-color: rgba(209, 216, 225, 0.5);
+        width: 300px;
+    }
+
+    #container{
+        width: 300px;
+    
+    }
+    
+    
+    #container img{
+        width: 200px;
+        height: 150px;
+    }
+
+    #fondo{
+        background-image: url(/img/fondoMobile.jpg);
+        opacity: 0.9;
+        height: 900px;
+    }
+    
+    #stats li{
+        color: black;
+        font-size: 23px;
+        line-height: 27px;
+        letter-spacing: 1px;
+    }
+    
+
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>PokeSarch</title>
+</head>
+<body>
+    <img id="fondo">
+    <main id="main">
+        <form action="submit">
+            
+            <h1>PokeSearch!</h1>
+
+            <div class="label">
+            <label for="name" id="name-label">Pokemon Name or ID</label>
+            <input type="text" name="name" id="name" class="input">
+            </div>
+            <div class="error" id="name-error"></div>
+            
+
+            <button type="submit" id="getPokemon">Search</button>
+            <!-- <button type="reset">Clean</button> -->
+
+        </form>
+        <div id="container"></div>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+</html>
