@@ -70,9 +70,11 @@ cargaDatos();
         
 const getPokemon=()=>{
 value=nombre.value;
-
+if(value>=650){
+    alert("Son solo 649 pokemons =/");
+}else{
 const pokeUrl=`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}`
-console.log(pokeUrl);
+
 fetch(pokeUrl)
 .then(response=>response.json())
 .then(response=>{
@@ -174,7 +176,7 @@ container.classList.remove("hidden");
 .catch(error=>{alert(`Sorry =(. There's no pokemon with that name`)
     container.classList.add("hidden")
 });
-
+}
 nombre.value="";
 error.innerHTML="";
 
