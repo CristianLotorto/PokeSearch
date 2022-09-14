@@ -122,23 +122,23 @@ if(typeName=="Fire"){
     
 }else if(typeName=="Fighting"){
 
-    container.style.backgroundColor="rgba(10, 27, 208, 0.7)";
+    container.style.backgroundColor="rgba(255, 255, 255, 0.7)";
     
 }else if(typeName=="Psychic"){
 
-    container.style.backgroundColor="rgba(188, 230, 41, 0.4)";
+    container.style.backgroundColor="rgba(188, 230, 41, 0.7)";
     
 }else if(typeName=="Rock"){
 
-    container.style.backgroundColor="rgba(66, 89, 97, 0.4)";
+    container.style.backgroundColor="rgba(66, 89, 97, 0.7)";
     
 }else if(typeName=="Ice"){
 
-    container.style.backgroundColor="rgba(12, 8, 231, 0.4)";
+    container.style.backgroundColor="rgba(12, 8, 231, 0.7)";
     
 }else if(typeName=="Steel"){
 
-    container.style.backgroundColor="rgba(115, 114, 119, 0.6)";
+    container.style.backgroundColor="rgba(115, 114, 119, 0.7)";
     
 }else if(typeName=="Dark"){
 
@@ -156,14 +156,15 @@ container.innerHTML=`
 
 <ul id="stats">
 
-<li id="name"><h2>${name}</h2></li>
+<li id="poke-name"><h2>${name}</h2></li>
+<div class="stats-container">
 <li class="stat">ID: ${id}</li>
 <li class="stat">Type: ${typeName}</li>
 <li class="stat">Weight: ${parseInt(weight*0.1)} Kg.</li>
 <li class="stat">Ability:</li>
 <li class="stat">${abilityName}</li>
 <li class="stat">${moveName}</li>
-
+</div>
 </ul>
 
 `;
