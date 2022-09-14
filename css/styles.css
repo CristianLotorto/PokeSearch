@@ -184,29 +184,29 @@ input{
     }
 
     button{
-        width: 250px;
+        width: 220px;
     }
     label{
         color:black;
-        width: 250px;
+        width: 220px;
     }
     input{
-        width: 250px;
+        width: 220px;
     }
     form{
         
         background-color: rgba(209, 216, 225, 0.5);
-        width: 300px;
+        width: 270px;
     }
 
     .container{
-        width: 300px;
+        width: 270px;
     
     }
     
     
     .container img{
-        width: 250px;
+        width: 220px;
         height: 150px;
     }
 
@@ -224,9 +224,12 @@ input{
     }
     
     #poke-name{
-        width: 250px;
+        width: 220px;
     }
     
+    .stats-container{
+        width: 220px;
+    }
 
 }
 
