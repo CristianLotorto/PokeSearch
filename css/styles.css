@@ -32,7 +32,7 @@ background-image: url(/img/fondito.jpeg);
 background-repeat: no-repeat;
 background-size: cover;
 width: 100vw;
-height: 100vh;
+height: 1150px;
 }
 
 label{
@@ -114,7 +114,7 @@ input{
 }
 
 
-#container img{
+.container img{
     width: 300px;
     height: 250px;
 }
@@ -126,6 +126,7 @@ input{
 }
 
 #stats li{
+    color: rgba(0, 0, 0, 0.9);
     font-size: 23px;
     font-weight: 700;
     align-items: center;
@@ -184,13 +185,13 @@ input{
         width: 300px;
     }
 
-    #container{
+    .container{
         width: 300px;
     
     }
     
     
-    #container img{
+    .container img{
         width: 200px;
         height: 150px;
     }

@@ -22,7 +22,7 @@ const labelAnimation=()=>{
     nombre.addEventListener("blur", ()=>{
         value=nombre.value;
         if(value==""){
-            
+
             nameLabel.style.transform="translateY(0px)";
             nameLabel.style.transitionDuration="500ms";
             error.innerHTML=`<p>*Debe Ingresar un Nombre o ID</p>`;
@@ -86,43 +86,43 @@ moveName=moveName.replace(moveName.charAt(0),moveName.charAt(0).toUpperCase());
 
 if(typeName=="Fire"){
     
-    container.style.backgroundColor="rgba(190, 80, 120,0.2)";
+    container.style.backgroundColor="rgba(190, 80, 120,0.7)";
     
 }else if(typeName=="Grass"){
 
-    container.style.backgroundColor="rgba(99, 177, 31,0.2)";
+    container.style.backgroundColor="rgba(99, 177, 31,0.7)";
     
 }else if(typeName=="Water"){
 
-    container.style.backgroundColor="rgba(23, 161, 236,0.2)";
+    container.style.backgroundColor="rgba(23, 161, 236,0.7)";
     
 }else if(typeName=="Bug"){
 
-    container.style.backgroundColor="rgba(8, 99, 39,0.2)";
+    container.style.backgroundColor="rgba(8, 99, 39,0.7)";
     
 }else if(typeName=="Normal"){
 
-    container.style.backgroundColor="rgba(239, 238, 241, 0.3)";
+    container.style.backgroundColor="rgba(239, 238, 241, 0.7)";
     
 }else if(typeName=="Poison"){
 
-    container.style.backgroundColor="rgba(197, 53, 216, 0.3)";
+    container.style.backgroundColor="rgba(197, 53, 216, 0.7)";
     
 }else if(typeName=="Electric"){
 
-    container.style.backgroundColor="rgba(229, 232, 63, 0.2)";
+    container.style.backgroundColor="rgba(229, 232, 63, 0.7)";
     
 }else if(typeName=="Ground"){
 
-    container.style.backgroundColor="rgba(88, 51, 8, 0.3)";
+    container.style.backgroundColor="rgba(88, 51, 8, 0.7)";
     
 }else if(typeName=="Fairy"){
 
-    container.style.backgroundColor="rgba(219, 169, 228, 0.3)";
+    container.style.backgroundColor="rgba(219, 169, 228, 0.7)";
     
 }else if(typeName=="Fighting"){
 
-    container.style.backgroundColor="rgba(10, 27, 208, 0.3)";
+    container.style.backgroundColor="rgba(10, 27, 208, 0.7)";
     
 }else if(typeName=="Psychic"){
 
@@ -142,11 +142,11 @@ if(typeName=="Fire"){
     
 }else if(typeName=="Dark"){
 
-    container.style.backgroundColor="rgba(12, 12, 17, 0.2)";
+    container.style.backgroundColor="rgba(12, 12, 17, 0.7)";
     
 }else if(typeName=="Ghost"){
 
-    container.style.backgroundColor="rgba(88, 37, 176, 0.2)";
+    container.style.backgroundColor="rgba(88, 37, 176, 0.7)";
     
 }
 
@@ -159,7 +159,7 @@ container.innerHTML=`
 <li id="name"><h2>${name}</h2></li>
 <li class="stat">ID: ${id}</li>
 <li class="stat">Type: ${typeName}</li>
-<li class="stat">Weight: ${weight*0.1} Kg.</li>
+<li class="stat">Weight: ${parseInt(weight*0.1)} Kg.</li>
 <li class="stat">Ability:</li>
 <li class="stat">${abilityName}</li>
 <li class="stat">${moveName}</li>
