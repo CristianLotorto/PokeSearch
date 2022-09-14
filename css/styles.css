@@ -91,13 +91,14 @@ input{
 }
 
 .error{
-    color: red;
+    color: white;
+    font-weight: 700;
     margin-bottom: 5px;
     text-align: center;
     letter-spacing: 1px;
 }
 
-#container{
+.container{
     position: flex;
     border-radius: 5px;
     background-color: rgba(245, 245, 245, 0.6);
@@ -131,6 +132,34 @@ input{
     list-style: none;
     line-height: 40px;
     letter-spacing: 1px;
+}
+
+.autocomplete {
+    position: absolute;
+    top: 100%;
+    margin-top: -1px;
+    width: 100%;
+    z-index: 1;
+    background: #fff;
+    margin: 0;
+    list-style: none;
+    transition: none;
+    padding: 0;
+    border: 1px solid #bfc8c9;
+}
+.autocomplete li {
+    padding: 6px 12px;
+    transition: 0.2s background;
+    cursor: pointer;
+}
+.autocomplete li:hover {
+    background: #e6f0f2;
+}
+.autocomplete li + li {
+    border-top: 1px solid #bfc8c9;
+}
+.hidden {
+    display: none;
 }
 
 
@@ -178,6 +207,7 @@ input{
         line-height: 27px;
         letter-spacing: 1px;
     }
+    
     
 
 }

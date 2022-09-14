@@ -1,14 +1,16 @@
 const nameLabel=document.getElementById("name-label");
 const nombre=document.getElementById("name");
-const error=document.querySelectorAll(".error");
+const error=document.querySelector(".error");
 const form=document.querySelector("form");
 const boton=document.getElementById("getPokemon");
-const container=document.getElementById("container");
+const container=document.querySelector(".container");
 
 let value=nombre.value
+// --------------------------------------------------------------
 
 
-const animation=()=>{
+// --------------------------------------------------------------
+const labelAnimation=()=>{
 
 
     nombre.addEventListener("focus", ()=>{
@@ -19,10 +21,12 @@ const animation=()=>{
     
     nombre.addEventListener("blur", ()=>{
         value=nombre.value;
-        if(nombre.value==""){
+        if(value==""){
+            
             nameLabel.style.transform="translateY(0px)";
             nameLabel.style.transitionDuration="500ms";
-            error.innerHTML="<span>Debe Ingresar un Nombre o ID</span>";
+            error.innerHTML=`<p>*Debe Ingresar un Nombre o ID</p>`;
+
         }else{
             error.innerHTML="";
         }
@@ -47,7 +51,7 @@ form.onsubmit=(e)=>{
 //     }
 // }
 
-animation();
+labelAnimation();
 cargaDatos();
 // reset();
 
@@ -65,6 +69,8 @@ cargaDatos();
         // }
         
 const getPokemon=()=>{
+value=nombre.value;
+
 const pokeUrl=`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}`
 console.log(pokeUrl);
 fetch(pokeUrl)
@@ -77,7 +83,6 @@ name=name.replace(name.charAt(0),name.charAt(0).toUpperCase());
 typeName=typeName.replace(typeName.charAt(0),typeName.charAt(0).toUpperCase());
 abilityName=abilityName.replace(abilityName.charAt(0),abilityName.charAt(0).toUpperCase());
 moveName=moveName.replace(moveName.charAt(0),moveName.charAt(0).toUpperCase());
-
 
 if(typeName=="Fire"){
     
@@ -154,7 +159,7 @@ container.innerHTML=`
 <li id="name"><h2>${name}</h2></li>
 <li class="stat">ID: ${id}</li>
 <li class="stat">Type: ${typeName}</li>
-<li class="stat">Weight: ${weight} Kg.</li>
+<li class="stat">Weight: ${weight*0.1} Kg.</li>
 <li class="stat">Ability:</li>
 <li class="stat">${abilityName}</li>
 <li class="stat">${moveName}</li>
@@ -163,15 +168,15 @@ container.innerHTML=`
 
 `;
 
+container.classList.remove("hidden");
+})
+.catch(error=>{alert(`Sorry =(. There's no pokemon with that name`)
+    container.classList.add("hidden")
 });
-nombre.value="";
-}
 
-addEventListener("keypress",(e)=>{
-    if(e.key=="Enter"){
-        value=nombre.value;
-        getPokemon();
-}   
-});
+nombre.value="";
+error.innerHTML="";
+
+}
 
 boton.addEventListener("click",getPokemon);
