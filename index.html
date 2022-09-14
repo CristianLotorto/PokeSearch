@@ -16,14 +16,11 @@
 
             <div class="label">
             <label for="name" id="name-label">Pokemon Name or ID</label>
-            <input type="text" name="name" id="name" class="input" autocomplete="off">
-            <ul
-                class="autocomplete hidden"
-                id="autocomplete-results"
-                role="listbox"
-            >
+            <input type="search" list="pokemons" name="name" id="name" class="input" autocomplete="off">
+            <datalist id="pokemons">
+                
+            </datalist>
 
-            </ul>
             </div>
             <div class="error" id="name-error"></div>
             
@@ -33,6 +30,7 @@
         </form>
         <div class="container hidden" ></div>
     </main>
-    <script src="./js/index.js"></script>
+    <script src="/js/names.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 </html>

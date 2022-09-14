@@ -4,10 +4,37 @@ const error=document.querySelector(".error");
 const form=document.querySelector("form");
 const boton=document.getElementById("getPokemon");
 const container=document.querySelector(".container");
+// const sugerencias=document.querySelector(".sugerencias");
+
 
 let value=nombre.value
 // --------------------------------------------------------------
+// const functionAutoComplete=(pokeName)=>{
+//     return pokeNames.filter((valor)=>{
+//         const valorMinuscula=valor.toLowerCase();
+//         const ciudadMinuscula=valor.toLowerCase();
 
+//         return valorMinuscula.includes(ciudadMinuscula);
+//     })
+// }
+
+// const filtro=()=>{
+//     nombre.addEventListener("input", ({target})=>{
+//         console.log(target);
+//         const datos=target.value
+
+//         if(datos.length){
+//             const autoCompleteValores=functionAutoComplete(datos);
+//             sugerencias.innerHTML=`
+//             ${autoCompleteValores.map((value)=>{
+//                 return (
+//                     `<li>${value}</li>`
+//                 )
+//             }).join('')}
+//             `;
+//         }
+//     })
+// }
 
 // --------------------------------------------------------------
 const labelAnimation=()=>{
@@ -26,7 +53,7 @@ const labelAnimation=()=>{
             nameLabel.style.transform="translateY(0px)";
             nameLabel.style.transitionDuration="500ms";
             error.innerHTML=`<p>*Debe Ingresar un Nombre o ID</p>`;
-
+            
         }else{
             error.innerHTML="";
         }
@@ -53,7 +80,6 @@ form.onsubmit=(e)=>{
 
 labelAnimation();
 cargaDatos();
-// reset();
 
 
 
